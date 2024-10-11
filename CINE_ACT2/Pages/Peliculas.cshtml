@@ -1,0 +1,27 @@
+﻿@page
+@model CINE_ACT2.Pages.PeliculasModel
+@{
+    ViewData["Title"] = "Lista de Películas";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Director</th>
+            <th>Año</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pelicula in Model.Peliculas)
+        {
+            <tr>
+                <td>@pelicula.Titulo</td>
+                <td>@pelicula.Director</td>
+                <td>@pelicula.Año</td>
+            </tr>
+        }
+    </tbody>
+</table>
